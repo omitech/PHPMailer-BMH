@@ -4,7 +4,7 @@
     "description": "Bounce Mail Handler",
     "keywords": ["bounce", "mail", "email"],
     "homepage": "http://instaclick.com/torontotechjobs/",
-    "license": "GPL",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Andy Prevost",
