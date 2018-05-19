@@ -520,8 +520,8 @@ class BounceMailHandler
     public function isParameter($currParameters, $varKey, $varValue)
     {
         foreach ($currParameters as $object) {
-            if ($object->attribute == $varKey) {
-                if ($object->value == $varValue) {
+            if (strtolower($object->attribute) == strtolower($varKey)) {
+                if (strtolower($object->value) == strtolower($varValue)) {
                     return true;
                 }
             }
