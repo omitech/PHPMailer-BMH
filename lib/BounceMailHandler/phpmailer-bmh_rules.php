@@ -1728,6 +1728,16 @@ function bmhDSNRules($dsn_msg,$dsn_report,$debug_mode=false) {
           $result['rule_cat'] = 'unknown';
           $result['rule_no']  = '0214';
         }
+        
+        // general 550 error - mail rejected
+        /* rule: user_reject
+         * sample:
+         *  smtp; 550 5.7.0 Blocked -
+         */
+        elseif (preg_match ("/^\s+?smtp; 550/i",$diag_code)) {
+          $result['rule_cat'] = 'user_reject';
+          $result['rule_no']  = '0901';
+        }
         break;
 
       case 'delayed':
